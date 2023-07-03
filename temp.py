@@ -34,16 +34,16 @@ def main():
 
     print(oosaka_station)
 
+    # Q3. 福岡県の平均気温を計算してください(14.0となればOK)
+    temp = 0.0
+    count = 0
 
-fukuoka_temp = 0.0
-fukuoka_count = 0
+    for weather in weather_information:
+        if weather["prefecture"] == "福岡県":
+            temp += weather["temperature"]
+            count += 1
 
-for weather in weather_information:
-    if weather["prefecture"] == "福岡県":
-        fukuoka_temp += weather["temperature"]
-
-print(fukuoka_temp)
-# Q3. 福岡県の平均気温を計算してください(14.0となればOK)
+    print(temp / count)
 
 
 if __name__ == "__main__":
