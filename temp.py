@@ -27,8 +27,8 @@ def main():
     oosaka_station = ""
 
     for weather in weather_information:
-        if weather["prefecture"] == "大阪府" and len(oosaka_station) <= len(weather["prefecture"]):
-            oosaka_station += weather["station"] + ","
+        if weather["prefecture"] == "大阪府" and len(oosaka_station) > 0:
+            oosaka_station += "," + weather["station"]
         elif weather["prefecture"] == "大阪府":
             oosaka_station += weather["station"]
 
