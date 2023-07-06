@@ -12,6 +12,15 @@ def main():
     ]
 
     # Q1. 全国の平均気温を計算してください(9.5となればOK)
+    tokyo_tmp = 0.0
+    count = 0
+    for weather in weather_information:
+        if weather["prefecture"] == "東京都":
+            tokyo_tmp += weather["temperature"]
+            count = count + 1
+
+    print(tokyo_tmp / count)
+    print("//////////////")
 
     # print(weather_information[0]["temperature"])
     # ↑こうすればtemperatureの値を取り出すことができる
